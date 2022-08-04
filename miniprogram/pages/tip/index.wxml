@@ -1,0 +1,18 @@
+<!-- index.wxml -->
+<view class="flex column aic jcc page">
+  <view wx:if="{{type}}" class="flex column aic jcc page">
+    <view class="title">啊咧，怎么会事呢</view>
+    <image show-menu-by-longpress class="img mat" mode="widthFix" src="/images/why.png"></image>
+  </view>
+  <view wx:if="{{!type}}" class="flex column aic jcc page">
+    <icon size="180rpx" type="success"></icon>
+    <view wx:if="{{!code}}" class="flex column aic jcc">
+      <view class="tip">创建成功！你的小组ID是：</view>
+      <view class="gid">{{groupId}}</view>
+          </view>
+    <view wx:if="{{code}}" class="flex column aic jcc">
+      <view class="tip">提交成功！你的小组ID是：</view>
+      <view class="gid">{{groupId}}</view>
+    </view>
+  </view>
+</view>
